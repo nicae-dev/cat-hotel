@@ -1,0 +1,19 @@
+.header {
+  display: grid;
+  grid-template-columns: 200px 1fr 260px;
+  gap: 10px;
+  padding-block: 30px;
+}
+
+.header__logo {
+  margin-left: -10px;
+}
+
+.header__contacts {
+  align-items: center;
+  justify-content: end;
+}
+
+.header__social {
+  margin-left: auto;
+}

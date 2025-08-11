@@ -1,0 +1,61 @@
+.hero {
+  font-family: $font-primary;
+  color: $text-color;
+}
+
+.hero__form {
+  width: 230px;
+}
+
+.hero__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.hero__slogan {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.hero__stamp {
+  width: 179px;
+  height: 179px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: $text-color-with-bg;
+
+
+  background-image: url("../../images/hero-stamp.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.hero__features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hero__features-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @include icon("heart", $text-second-color, 45px, 38px);
+}
