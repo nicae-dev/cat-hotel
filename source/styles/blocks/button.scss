@@ -1,6 +1,5 @@
 .button {
   display: block;
-  width: fit-content;
   min-width: 220px;
   padding: 18px 30px;
   border-radius: 100px;
@@ -15,18 +14,30 @@
   background-color: $button-bg-color;
   text-decoration: none;
   text-align: center;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: $button-text-color-hover;
+    background-color: $button-bg-color-hover;
+    cursor: pointer;
+  }
 }
 
 .button--icon {
   display: flex;
   gap: 13px;
   align-items: center;
+
+  &::before {
+    background-color: currentColor;
+  }
 }
 
 .button--icon-instagram {
   font-size: 16px;
 
-  @include icon("instagram", $button-text-color, 23px, 23px);
+  @include icon("instagram", currentColor, 23px, 23px);
 
   &::before {
     mask-size: 30px 30px;

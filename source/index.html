@@ -14,8 +14,8 @@
 </head>
 
 <body class="page__body">
-  <div class="hero">
-    <header class="page__header header container">
+  <div class="hero container">
+    <header class="page__header header  hero__header">
       <a class="header__logo logo " href="index.html">
         <img class="logo__image" src="images/logo.svg" alt="Котико" width="187" height="36">
         <span class="logo__name">отель для котиков</span>
@@ -31,25 +31,65 @@
       <nav class="hero__nav">
         <img src="images/paw-with-text.svg" alt="навигация" width="381" height="379">
       </nav>
-      <h1 class="hero__title">Гостиница для кошек с видеонаблюдением</h1>
-      <p class="hero__slogan">Будьте спокойны за вашего питомца, пока вы в отъезде</p>
+      <h1 class="hero__title">Гостиница для кошек <br>с видеонаблюдением</h1>
       <p class="hero__stamp">Любовь и забота гарантированы</p>
-      <form class="hero__form form" action="/" method="post">
-        <label class="visually-hidden" for="name">Имя</label>
-        <input class="form__input" type="text" placeholder="Имя" id="name" name="name">
-        <label class="visually-hidden" for="phone">Телефон</label>
-        <input class="form__input" type="phone" placeholder="Телефон" id="phone" name="phone">
-        <button class="form__button button" type="submit">Отправить заявку</button>
-      </form>
+      <div class="hero__text-and-form">
+        <p class="hero__slogan">Будьте спокойны за вашего питомца, пока вы в отъезде</p>
+        <form class="hero__form form" action="/" method="post">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input class="form__input" type="text" placeholder="Имя" id="name" name="name">
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input class="form__input" type="phone" placeholder="Телефон" id="phone" name="phone">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+        </form>
+      </div>
       <ul class="hero__features">
         <li class="hero__features-item">видеонаблюдение в режиме 24/7 и ежедневный фото/видеоотчет в мессенджеры</li>
-        <li class="hero__features-item">просторные номера с окнами</li>
-        <li class="hero__features-item">круглосуточное присутствие котоняни</li>
+        <li class="hero__features-item">просторные номера <br>с окнами</li>
+        <li class="hero__features-item">круглосуточное <br>присутствие котоняни</li>
       </ul>
     </section>
   </div>
 
   <main class="page__main">
+    <div class="container">
+
+      <section class="rooms section">
+        <div class="rooms__wrapper-title">
+          <h2 class="section__title">Номера и цены</h2>
+          <div class="rooms__sale"><span>Скидка 20% до конца ноября!</span></div>
+        </div>
+        <ul class="rooms__list">
+          <li class="rooms__item">
+            <article class="room">
+              <div class="room__slider">
+                <div class="room__slide">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 320px)" srcset="images/room1-mobile@1x.webp 1x, images/room1-mobile@2x.webp 2x" width="300" height="395">
+                    <source type="image/webp" srcset="images/room1@1x.webp 1x, images/room1@2x.webp 2x" width="380" height="500">
+
+                    <source type="image/jpeg" media="(max-width: 320px)" srcset="images/room1-mobile@1x.jpg 1x, images/room1-mobile@2x.png 2x" width="300" height="395">
+                    <img class="room__image" src="images/room1@1x.jpg" srcset="images/room1@2x.jpg 2x" width="380" height="500" alt="комната кошачий домик вид снизу" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <dl class="room__info">
+                <dt class="room__info-title room__info-firstline">
+                  <h3 class="room__title">Номер "СТАНДАРТ"</h3>
+                </dt>
+                <dd class="room__info-text room__info-firstline room__price">700 руб./сутки</dd>
+                <dt class="room__info-title">Размер номера</dt>
+                <dd class="room__info-text">1500*1500*2100 см</dd>
+                <dt class="room__info-title">Размер домиков</dt>
+                <dd class="room__info-text">32*32см <br>38*32см</dd>
+              </dl>
+              <button class="button room__button" type="button">Забронировать</button>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+    </div>
   </main>
 
   <footer class="page__footer footer">

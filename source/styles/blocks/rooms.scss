@@ -1,0 +1,36 @@
+.rooms__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.rooms__wrapper-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.rooms__sale {
+  height: 206px;
+  padding: 85px 45px 65px 66px;
+  aspect-ratio: 3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+
+  background-image:
+    url("../../images/sale-cat.svg"),
+    url("../../images/sale-borders.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 26px) 11px, center center;
+  background-size:
+    55px 60px,
+    283px 206px;
+}
