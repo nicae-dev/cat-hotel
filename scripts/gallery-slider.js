@@ -1,0 +1,1 @@
+var e=new Swiper(".gallery__slider",{lazy:!0,slidesPerView:3,spaceBetween:30,direction:"horizontal",loop:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",type:"fraction"},grabCursor:!0});console.log("gallery-slider.js load");
