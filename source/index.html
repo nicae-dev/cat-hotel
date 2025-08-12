@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <title>Котико</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="styles/styles.css">
   <!-- <link rel="icon" href="favicon.ico"> -->
-  <!-- <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml"> -->
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
   <!-- <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> -->
   <!-- <link rel="manifest" href="manifest.webmanifest"> -->
   <!-- <link rel="preload" href="../fonts/Gilroy-Regular.woff" type="font/woff" as="font" crossorigin="anonymous"> -->
@@ -61,17 +62,26 @@
         </div>
         <ul class="rooms__list">
           <li class="rooms__item">
-            <article class="room">
-              <div class="room__slider">
-                <div class="room__slide">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 320px)" srcset="images/room1-mobile@1x.webp 1x, images/room1-mobile@2x.webp 2x" width="300" height="395">
-                    <source type="image/webp" srcset="images/room1@1x.webp 1x, images/room1@2x.webp 2x" width="380" height="500">
+            <article class="room rooms__room">
+              <div class="room__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 320px)" srcset="images/room1-mobile@1x.webp 1x, images/room1-mobile@2x.webp 2x" width="300" height="395">
+                      <source type="image/webp" srcset="images/room1@1x.webp 1x, images/room1@2x.webp 2x" width="380" height="500">
 
-                    <source type="image/jpeg" media="(max-width: 320px)" srcset="images/room1-mobile@1x.jpg 1x, images/room1-mobile@2x.png 2x" width="300" height="395">
-                    <img class="room__image" src="images/room1@1x.jpg" srcset="images/room1@2x.jpg 2x" width="380" height="500" alt="комната кошачий домик вид снизу" loading="lazy">
-                  </picture>
+                      <source type="image/jpeg" media="(max-width: 320px)" srcset="images/room1-mobile@1x.jpg 1x, images/room1-mobile@2x.png 2x" width="300" height="395">
+                      <img class="room__image" src="images/room1@1x.jpg" srcset="images/room1@2x.jpg 2x" width="380" height="500" alt="комната кошачий домик вид снизу" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <img class="room__image" src="images/image-placeholder.svg" width="247" height="177" alt="кот с клубком" loading="lazy">
+                    </picture>
+                  </div>
                 </div>
+                <div class="swiper-button-prev room__slider-button room__slider-button--prev"></div>
+                <div class="swiper-button-next room__slider-button room__slider-button--next"></div>
               </div>
               <dl class="room__info">
                 <dt class="room__info-title room__info-firstline">
@@ -81,7 +91,85 @@
                 <dt class="room__info-title">Размер номера</dt>
                 <dd class="room__info-text">1500*1500*2100 см</dd>
                 <dt class="room__info-title">Размер домиков</dt>
-                <dd class="room__info-text">32*32см <br>38*32см</dd>
+                <div class="room__info-text-wrapper">
+                  <dd class="room__info-text">32*32см</dd>
+                  <dd class="room__info-text">38*32 см</dd>
+                </div>
+              </dl>
+              <button class="button room__button" type="button">Забронировать</button>
+            </article>
+          </li>
+          <li class="rooms__item">
+            <article class="room rooms__room">
+              <div class="room__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 320px)" srcset="images/room2-mobile@1x.webp 1x, images/room2-mobile@2x.webp 2x" width="300" height="395">
+                      <source type="image/webp" srcset="images/room2@1x.webp 1x, images/room2@2x.webp 2x" width="380" height="500">
+
+                      <source type="image/jpeg" media="(max-width: 320px)" srcset="images/room2-mobile@1x.jpg 1x, images/room2-mobile@2x.png 2x" width="300" height="395">
+                      <img class="room__image" src="images/room2@1x.jpg" srcset="images/room2@2x.jpg 2x" width="380" height="500" alt="комната кошачий домик вид снизу" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <img class="room__image" src="images/image-placeholder.svg" width="247" height="177" alt="кот с клубком" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-button-prev room__slider-button room__slider-button--prev"></div>
+                <div class="swiper-button-next room__slider-button room__slider-button--next"></div>
+              </div>
+              <dl class="room__info">
+                <dt class="room__info-title room__info-firstline">
+                  <h3 class="room__title">Номер "СТАНДАРТ +"</h3>
+                </dt>
+                <dd class="room__info-text room__info-firstline room__price">800 руб./сутки</dd>
+                <dt class="room__info-title">Размер номера</dt>
+                <dd class="room__info-text">1200*1200*2100 см</dd>
+                <dt class="room__info-title">Размер домиков</dt>
+                <div class="room__info-text-wrapper">
+                  <dd class="room__info-text">38*32 см</dd>
+                </div>
+              </dl>
+              <button class="button room__button" type="button">Забронировать</button>
+            </article>
+          </li>
+          <li class="rooms__item">
+            <article class="room rooms__room">
+              <div class="room__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 320px)" srcset="images/room3-mobile@1x.webp 1x, images/room3-mobile@2x.webp 2x" width="300" height="395">
+                      <source type="image/webp" srcset="images/room3@1x.webp 1x, images/room3@2x.webp 2x" width="380" height="500">
+
+                      <source type="image/jpeg" media="(max-width: 320px)" srcset="images/room3-mobile@1x.jpg 1x, images/room3-mobile@2x.png 2x" width="300" height="395">
+                      <img class="room__image" src="images/room3@1x.jpg" srcset="images/room3@2x.jpg 2x" width="380" height="500" alt="комната кошачий домик панорманое окно вид сбоку" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="room__slide swiper-slide">
+                    <picture>
+                      <img class="room__image" src="images/image-placeholder.svg" width="247" height="177" alt="кот с клубком" loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-button-prev room__slider-button room__slider-button--prev"></div>
+                <div class="swiper-button-next room__slider-button room__slider-button--next"></div>
+              </div>
+              <dl class="room__info">
+                <dt class="room__info-title room__info-firstline">
+                  <h3 class="room__title">Номер<br>"ЛЮКС"</h3>
+                </dt>
+                <dd class="room__info-text room__info-firstline room__price">1000 руб./сутки</dd>
+                <dt class="room__info-title">Размер номера</dt>
+                <dd class="room__info-text">1200*3700*1500 см</dd>
+                <dt class="room__info-title">Размер домиков</dt>
+                <div class="room__info-text-wrapper">
+                  <dd class="room__info-text">32*32 см</dd>
+                  <dd class="room__info-text">38*32 см</dd>
+                </div>
               </dl>
               <button class="button room__button" type="button">Забронировать</button>
             </article>
@@ -95,6 +183,8 @@
   <footer class="page__footer footer">
 
   </footer>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="scripts/rooms-slider.js"></script>
 
 </body>
 

@@ -7,6 +7,10 @@
   gap: 30px;
 }
 
+.rooms__room {
+  height: 100%;
+}
+
 .rooms__wrapper-title {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,3 +38,4 @@
     55px 60px,
     283px 206px;
 }
+
