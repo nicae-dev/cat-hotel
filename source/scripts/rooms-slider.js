@@ -9,6 +9,11 @@
 const swiperRooms = new Swiper('.room__slider', {
   direction: 'horizontal',
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+    pauseOnMouseEnter: true,
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
