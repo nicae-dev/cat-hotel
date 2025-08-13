@@ -1,0 +1,17 @@
+.booking {
+
+}
+
+.booking__form {
+  background-color: $section-bg-color;
+  margin-inline: -$page-padding-inline-mobile;
+  padding: 30px $page-padding-inline-mobile;
+
+  @media (min-width: $page-width-desktop) {
+    margin-inline: 0;
+  }
+}
+
+.booking__image {
+  margin: 10px 0 18px;
+}

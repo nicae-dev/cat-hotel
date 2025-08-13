@@ -1,15 +1,23 @@
 .room {
-  font-family: $font-primary;
-  width: 380px;
+  width: calc($page-width-mobile - 2 * $page-padding-inline-mobile);
   border: 1px solid rgba($bg-color, 0.5);
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: $font-primary;
+
+  @media (min-width: $page-width-desktop) {
+    width: 380px;
+  }
 }
 
 .room__slider {
   width: 100%;
-  height: 500px;
+  height: 395px;
+
+  @media (min-width: $page-width-desktop) {
+    height: 500px;
+  }
 }
 
 .room__slide {
@@ -49,12 +57,27 @@
 
 .room__info {
   flex-grow: 1;
-  padding: 20px 5px 20px 20px;
   margin: 0;
+  padding: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px 16px;
-  align-content: start;
+  gap: 5px;
+
+  @media (min-width: $page-width-desktop) {
+    padding: 20px 5px 20px 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 16px;
+    align-content: start;
+  }
+}
+
+.room__info-text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (min-width: $page-width-desktop) {
+    display: block;
+  }
 }
 
 .room__info-title {
@@ -66,35 +89,59 @@
 
 .room__info-text {
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
   font-weight: 400;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 1.4;
   color: $text-color;
+
+  @media (min-width: $page-width-desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .room__info-firstline {
-  margin-top: auto;
-  margin-bottom: 20px;
+  @media (min-width: $page-width-desktop) {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .room__title {
   margin: 0;
-  font-weight: 600;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 1.4;
   color: $text-second-color;
+
+  @media (min-width: $page-width-desktop) {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
 
 .room__price {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+
+  @media (min-width: $page-width-desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .room__button {
-  margin: 20px 25px 30px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.4;
+  margin: 0 0 30px;
+
+  @media (min-width: $page-width-desktop) {
+    margin: 20px 25px 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }

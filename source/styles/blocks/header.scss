@@ -1,14 +1,22 @@
 .header {
   display: grid;
-  grid-template-columns: 200px 1fr 260px;
-  gap: 10px;
-  align-items: center;
-  padding-top: 30px;
+  padding-top: 20px;
+
+  @media (min-width: $page-width-desktop) {
+    align-items: center;
+    grid-template-columns: 200px 1fr 260px;
+    gap: 10px;
+    padding-top: 30px;
+  }
 }
 
 .header__logo {
-  margin-left: -10px;
-  margin-top: -10px;
+  margin: -10px auto 0;
+
+  @media (min-width: $page-width-desktop) {
+    margin-left: -10px;
+    margin-right: 0;
+  }
 }
 
 .header__contacts {
@@ -17,5 +25,9 @@
 }
 
 .header__social {
-  margin-left: auto;
+  margin-inline: auto;
+
+  @media (min-width: $page-width-desktop) {
+    margin-right: 0;
+  }
 }

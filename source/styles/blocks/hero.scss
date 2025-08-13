@@ -2,35 +2,40 @@
   font-family: $font-primary;
   color: $text-color;
   padding-bottom: 40px;
-  background-image:
-    url("../../images/hero-plants.svg"),
-    url("../../images/hero-leaves.svg"),
-    url("../../images/cloud.svg"),
-    url("../../images/cloud.svg"),
-    url("../../images/cloud.svg"),
-    url("../../images/cloud.svg");
-  background-repeat: no-repeat;
-  background-position:
-    calc(100% + 30px) calc(100% - 53px),
-    0 100%,
-    calc(50% - 173px) 10px,
-    calc(50% + 196px) 66px,
-    calc(50% + 334px) 44px,
-    calc(50% + 718px) 79px;
-  background-size:
-    431px 384px,
-    400px 376px,
-    177px 60px,
-    110px 37px,
-    91px 30px,
-    204px 68px;
+
+  @media (min-width: $page-width-desktop) {
+    background-image:
+      url("../../images/hero-plants.svg"),
+      url("../../images/hero-leaves.svg"),
+      url("../../images/cloud.svg"),
+      url("../../images/cloud.svg"),
+      url("../../images/cloud.svg"),
+      url("../../images/cloud.svg");
+    background-repeat: no-repeat;
+    background-position:
+      calc(100% + 30px) calc(100% - 53px),
+      0 100%,
+      calc(50% - 173px) 10px,
+      calc(50% + 196px) 66px,
+      calc(50% + 334px) 44px,
+      calc(50% + 718px) 79px;
+    background-size:
+      431px 384px,
+      400px 376px,
+      177px 60px,
+      110px 37px,
+      91px 30px,
+      204px 68px;
+  }
 }
 
 .hero__wrapper {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  grid-template-rows: repeat(4, auto);
-  gap: 0 32px;
+  @media (min-width: $page-width-desktop) {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 0 32px;
+  }
 }
 
 .hero__nav {
@@ -40,79 +45,115 @@
 
 
 .hero__form {
-  width: 230px;
-  margin: 29px 0;
-  gap: 28px;
+  @media (max-width: $page-width-desktop) {
+    display: none;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 230px;
+    margin: 29px 0;
+    gap: 28px;
+  }
 }
 
 .hero__title {
   margin: 0;
-  margin-top: 44px;
-  grid-column: 2/3;
-  grid-row: 1/2;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 25px;
+  line-height: 1.4;
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 44px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 48px;
+    line-height: 1.2;
+  }
 }
 
 .hero__slogan {
-  width: 525px;
-  margin: 21px 0;
   font-family: $font-primary;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+
+  @media (min-width: $page-width-desktop) {
+    width: 525px;
+    margin: 21px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+  }
 }
 
 .hero__text-and-form {
-  grid-column: 2/3;
-  grid-row: 2/-2;
-  margin-right: -200px;
-  padding-bottom: 88px;
-  background-image: url("../../images/hero-cat.svg");
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 834px 370px;
+  @media (min-width: $page-width-desktop) {
+    grid-column: 2/3;
+    grid-row: 2/-2;
+    margin-right: -200px;
+    padding-bottom: 88px;
+    background-image: url("../../images/hero-cat.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 834px 370px;
+  }
+}
+
+.hero__button {
+  margin-top: 0;
+  padding: 17px 26px;
 }
 
 .hero__stamp {
-  width: 179px;
-  height: 179px;
-  padding: 20px;
-  margin: -50px 28px 20px;
-  display: flex;
-  align-items: center;
-  grid-column: 1/2;
-  grid-row: -3/-2;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $text-color;
 
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
-  text-align: center;
-  color: $text-color-with-bg;
-  text-shadow:
-    -1px -1px 0 $text-second-color,
-    1px -1px 0 $text-second-color,
-    -1px 1px 0 $text-second-color,
-    1px 1px 0 $text-second-color;
+  @media (min-width: $page-width-desktop) {
+    width: 179px;
+    height: 179px;
+    padding: 20px;
+    margin: -50px 28px 20px;
+    display: flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: -3/-2;
 
-  background-image: url("../../images/hero-stamp.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 179px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: $text-color-with-bg;
+    text-shadow:
+      -1px -1px 0 $text-second-color,
+      1px -1px 0 $text-second-color,
+      -1px 1px 0 $text-second-color,
+      1px 1px 0 $text-second-color;
 
-  transform: rotate(-16.54deg);
-  transform-origin: center;
+    background-image: url("../../images/hero-stamp.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 179px;
+
+    transform: rotate(-16.54deg);
+    transform-origin: center;
+  }
 }
 
 .hero__features {
   list-style-type: none;
   padding: 20px 0;
   margin: 0;
-  grid-row: -2/-1;
-  grid-column: 1/3;
+
   display: flex;
-  gap: 75px;
+  gap: 20px 75px;
+  flex-wrap: wrap;
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: -2/-1;
+    grid-column: 1/3;
+  }
 }
 
 .hero__features-item {

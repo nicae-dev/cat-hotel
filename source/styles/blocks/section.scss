@@ -1,13 +1,25 @@
 .section {
-  margin: 90px 0;
+  margin: 80px 0;
+
+  @media (min-width: $page-width-desktop) {
+    margin: 90px 0;
+  }
 }
 
 .section__title {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   font-family: $font-primary;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 1;
+  font-size: 20px;
+  line-height: 1.4;
+
   color: $text-color;
+
+  @media (min-width: $page-width-desktop) {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 1;
+  }
 }

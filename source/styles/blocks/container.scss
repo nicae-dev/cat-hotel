@@ -1,5 +1,11 @@
 .container {
-  width: $page-width-desktop;
+  width: $page-width-mobile;
   margin: 0 auto;
-  padding: 0 $page-padding-inline;
+  padding: 0 $page-padding-inline-mobile;
+  background-color: rgb(253, 243, 229);
+
+  @media (min-width: $page-width-desktop) {
+    width: $page-width-desktop;
+    padding: 0 $page-padding-inline;
+  }
 }

@@ -1,0 +1,147 @@
+.placement {
+  font-family: $font-primary;
+  color: $text-color;
+}
+
+.placement__title {
+  margin-bottom: 5px;
+}
+
+.placement__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.placement__item {
+  padding: 15px 0 30px;
+  display: grid;
+  gap: 20px;
+
+  & ~ & {
+    border-top: 1px solid $text-second-color;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-top: 40px;
+    border-top: 1px solid $text-second-color;
+    grid-template-columns: 460px 1fr;
+    gap: 30px 170px;
+  }
+}
+
+.placement__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+
+  @media (min-width: $page-width-desktop) {
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+.placement__subtitle--full-width {
+  @media (min-width: $page-width-desktop) {
+    grid-column: 1/-1;
+  }
+}
+
+.placement__subtitle--accent {
+  @media (max-width: $page-width-desktop) {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+.placement__desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $text-light-color;
+
+  @media (min-width: $page-width-desktop) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.placement__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+
+  & ~ & {
+    margin-top: 18px;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    font-size: 18px;
+  }
+}
+
+.placement__text-wrap {
+  @media (min-width: $page-width-desktop) {
+    padding: 7px 20px 0;
+  }
+}
+
+.placement__image {
+  margin: 30px auto 14px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  @media (min-width: $page-width-desktop) {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 510px;
+    height: 349px;
+    transform: rotate(6deg) translateX(13px) translateY(-13px);
+    transform-origin: center;
+  }
+}
+
+.placement__sublist {
+  padding: 0;
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+
+  @media (min-width: $page-width-desktop) {
+    font-size: 18px;
+  }
+}
+
+.placement__subitem {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+
+  & ~ & {
+    margin: 15px 0 0;
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: $text-second-color;
+    border-radius: 100%;
+  }
+}
+
+.placement__subitem--larger {
+  gap: 20px;
+  align-items: center;
+
+  & ~ & {
+    margin: 20px 0 0;
+  }
+}

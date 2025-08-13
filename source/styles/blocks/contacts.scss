@@ -1,21 +1,31 @@
 .contacts {
   list-style-type: none;
-  display: flex;
-  gap: 20px;
+
   padding: 0;
   margin: 0;
+
+  @media (min-width: $page-width-desktop) {
+    display: flex;
+    gap: 20px;
+  }
 }
 
 .contacts__text {
   padding: 5px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  flex-direction: column;
   font-family: $font-primary;
   font-weight: 600;
   font-size: 13px;
   line-height: 1;
   color: $text-color;
+
+  @media (min-width: $page-width-desktop) {
+    flex-direction: row;
+    gap: 5px;
+  }
 }
 
 .contacts__text--address {
