@@ -56,7 +56,7 @@
     <div class="container">
 
       <section class="rooms section">
-        <div class="rooms__wrapper-title">
+        <div class="section__wrapper-title">
           <h2 class="section__title">Номера и цены</h2>
           <div class="rooms__sale"><span>Скидка 20% до конца ноября!</span></div>
         </div>
@@ -275,26 +275,72 @@
 
       <section class="booking section">
         <h2 class="section__title">Заявка на бронирование</h2>
-        <img class="booking__image" src="images/cat-lies-and-heart.svg" alt="кот лежит" width="300" height="285">
-        <form class="booking__form form" action="/" method="post">
-          <label class="visually-hidden" for="booking-name">Имя</label>
-          <input class="form__input" type="text" placeholder="Имя" id="booking-name" name="name">
-          <label class="visually-hidden" for="booking-phone">Телефон</label>
-          <input class="form__input" type="phone" placeholder="Телефон" id="booking-phone" name="phone">
-          <label class="visually-hidden" for="booking-petname">Кличка животного</label>
-          <input class="form__input" type="text" placeholder="Кличка животного" id="booking-petname" name="petname">
+        <div class="booking__wrap">
 
-          <label class="visually-hidden" for="booking-datestart">Дата заезда</label>
-          <input class="form__input" type="text" placeholder="Дата заезда" id="booking-datestart" name="datestart">
+          <img class="booking__image" src="images/cat-lies-and-heart.svg" alt="кот лежит" width="300" height="285">
+          <form class="booking__form form" action="/" method="post">
+            <label class="visually-hidden" for="booking-name">Имя</label>
+            <input class="form__input booking__input-name" type="text" placeholder="Имя" id="booking-name" name="name">
+            <label class="visually-hidden" for="booking-phone">Телефон</label>
+            <input class="form__input booking__input-phone" type="phone" placeholder="Телефон" id="booking-phone" name="phone">
+            <label class="visually-hidden" for="booking-petname">Кличка животного</label>
+            <input class="form__input booking__input-petname" type="text" placeholder="Кличка животного" id="booking-petname" name="petname">
 
-          <label class="visually-hidden" for="booking-dateend">Дата выезда</label>
-          <input class="form__input" type="text" placeholder="Дата выезда" id="booking-dateend" name="dateend">
-          <label class="visually-hidden" for="booking-type">Тип номера</label>
-          <input class="form__input" type="text" placeholder="Тип номера" id="booking-type" name="type">
-          <label class="visually-hidden" for="booking-extra">Примечание</label>
-          <input class="form__input" type="text" placeholder="Примечание" id="booking-extra" name="extra">
-          <button class="form__button button" type="submit">Забронировать</button>
-        </form>
+            <label class="visually-hidden" for="booking-datestart">Дата заезда</label>
+            <input class="form__input booking__input-datestart" type="text" placeholder="Дата заезда" id="booking-datestart" name="datestart">
+
+            <label class="visually-hidden" for="booking-dateend">Дата выезда</label>
+            <input class="form__input booking__input-dateend" type="text" placeholder="Дата выезда" id="booking-dateend" name="dateend">
+            <label class="visually-hidden" for="booking-type">Тип номера</label>
+            <input class="form__input booking__input-type" type="text" placeholder="Тип номера" id="booking-type" name="type">
+            <label class="visually-hidden" for="booking-extra">Примечание</label>
+            <input class="form__input booking__input-extra" type="text" placeholder="Примечание" id="booking-extra" name="extra">
+            <button class="form__button button booking__button" type="submit">Забронировать</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section videoroom">
+        <div class="section__wrapper-title">
+          <h2 class="section__title">Видеонаблюдение</h2>
+          <p class="videoroom__text">Чтобы увидеть вашего кота или кошку нужно войти под логином и паролем, которые вам выдали при заселении</p>
+        </div>
+
+        <p class="videoroom__subtitle">Выберите номер комнаты вашего котика и посмотрите, чем он сейчас занят</p>
+        <ol class="videoroom__list" id="videoroom-list">
+          <!-- <li class="videoroom__item"><a class="videoroom__button" href="#!"><span class="visually-hidden">Выбрать комнату</span></a></li> -->
+        </ol>
+        <button class="videoroom__button-more" type="button">Смотреть еще</button>
+      </section>
+      <section class="section about">
+        <h2 class="section__title">Всё о нас</h2>
+        <p class="section__text about__desc">Ценность нашей гостиницы в том, что вы можете полностью доверить нам заботу и уход за вашим котиком!</p>
+        <p class="section__subtitle about__subtitle">Где и с кем оставить своего котика на время отпуска?</p>
+        <div class="about_text-wrap">
+          <p class="section__text about__text">Многие из нас, планируя отпуск, или при необходимости уехать в командировку, или в период приезда гостей с аллергией и по другим причинам, сталкиваются с данным вопросом.</p>
+          <p class="section__text about__text">В маленьких городах этот вопрос решается благодаря помощи родственников и соседей, которые возьмут котика к себе или станут регулярно его навещать, чтобы покормить и уделить внимание.</p>
+          <p class="section__text about__text">В большом городе данная задача решается сложнее, т.к. из-за неблизких расстояний возникают неудобства ежедневно навещать Вашего котика. Данная ситуация негативно сказывается на режиме кормления и длительное отсутствие внимания является стрессом для животного.</p>
+        </div>
+        <p class="section__subtitle about__subtitle about__subtitle--larger">Мы предлагаем</p>
+        <ul class="about__list">
+          <li class="about__item">гостиница оснащена приточно-вытяжной вентиляцией, с регулировкой температуры в летний и зимний период</li>
+          <li class="about__item">соблюдение санитарно-гигиенических норм</li>
+          <li class="about__item">круглосуточное присутствие котоняни</li>
+          <li class="about__item">кормление и уход (индивидуальный подход к каждому котику)</li>
+          <li class="about__item">подготовка номера к заселению нового постояльца (обработка поверхностей дезинфицирующими средствами, кварцевание)</li>
+          <li class="about__item">видеонаблюдение в режиме 24/7</li>
+          <li class="about__item">наличие холодильника для хранения влажного корма</li>
+          <li class="about__item">ежедневный фото/видеоотчет на мессенджеры</li>
+          <li class="about__item about__item--large">
+            <span>индивидуальные номера</span>
+            <div class="about__subtext-wrap">
+              <p class="about__subtext">10 номеров более 2 кв. м с окном</p>
+              <p class="about__subtext">6 номеров более 2 кв. м без окна</p>
+              <p class="about__subtext">1 номер более 3 кв.м с окнами</p>
+            </div>
+
+          </li>
+        </ul>
       </section>
     </div>
   </main>
@@ -305,6 +351,7 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <script src="scripts/rooms-slider.js" async></script>
   <script src="scripts/gallery-slider.js" async></script>
+  <script src="scripts/videoroom-list.js" async></script>
 
 </body>
 

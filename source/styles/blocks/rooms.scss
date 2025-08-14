@@ -11,13 +11,13 @@
   height: 100%;
 }
 
-.rooms__wrapper-title {
-  @media (min-width: $page-width-desktop) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-}
+// .rooms__wrapper-title {
+//   @media (min-width: $page-width-desktop) {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     align-items: center;
+//   }
+// }
 
 .rooms__sale {
   height: 206px;

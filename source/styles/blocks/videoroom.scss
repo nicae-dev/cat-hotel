@@ -1,0 +1,137 @@
+.videoroom {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $page-width-desktop) {
+    display: inline-flex;
+    gap: 55px 36px;
+  }
+}
+
+.videoroom__text {
+  @media (min-width: $page-width-desktop) {
+    padding: 11px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    width: 450px;
+  }
+}
+
+.videoroom__subtitle {
+  @media (min-width: $page-width-desktop) {
+    display: block;
+    margin: 0;
+    width: calc(140px*3 + 36px*2);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-right: 60px;
+  }
+}
+
+.videoroom__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+
+  @media (min-width: $page-width-desktop) {
+    display: contents;
+  }
+}
+
+.videoroom__item {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $text-heavy-color;
+}
+
+.videoroom__button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  position: relative;
+
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $text-heavy-color;
+  background-color: rgba($bg-color-light, 0.5);
+  text-decoration: none;
+  border-radius: 100%;
+
+  @include icon("paw-conture", $icon-color, 40px, 33px, 40px, 33px);
+
+
+  &::before {
+    position: absolute;
+    right: -8px;
+    bottom: -2px;
+    opacity: 0.7;
+    transition: background-image $time, transform $time;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    @include icon("paw-fill", $icon-color, 40px, 33px, 40px, 33px);
+    cursor: pointer;
+    color: $text-heavy-color;
+
+    &::before {
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 140px;
+    height: 140px;
+    font-size: 40px;
+    line-height: 1;
+
+    @include icon("paw-conture", $icon-color, 70px, 57px, 70px, 57px);
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      @include icon("paw-fill", $icon-color, 70px, 57px, 70px, 57px);
+    }
+  }
+}
+
+.videoroom__button-more {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $text-light-color;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $page-width-desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    cursor: pointer;
+    color: $text-heavy-color;
+  }
+}

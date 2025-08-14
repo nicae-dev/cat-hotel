@@ -11,6 +11,7 @@
   padding: 12px 0;
   border: none;
   border-bottom: 1px solid $text-color;
+  background-color: transparent;
 
   &::placeholder {
     font-family: $font-primary;
@@ -18,7 +19,6 @@
     font-size: 16px;
     line-height: 1.4;
     color: $text-light-color;
-    background-color: $body-bg-color;
   }
 }
 
@@ -28,6 +28,7 @@
   padding-bottom: 24px;
 
   @media (min-width: $page-width-desktop) {
+    min-width: 330px;
     justify-self: start;
     margin-top: 20px;
     padding-top: 21px;

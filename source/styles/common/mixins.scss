@@ -8,8 +8,8 @@
   }
 }
 
-@mixin icon($name, $color: $icon-color, $width:25px, $height:25px, $mask-width: 100%, $mask-height: 100%) {
-  &::before {
+@mixin icon($name, $color: $icon-color, $width:25px, $height:25px, $mask-width: 100%, $mask-height: 100%, $psedo: "before") {
+  &::#{$psedo} {
     display: block;
     content: "";
     width: $width;

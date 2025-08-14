@@ -1,5 +1,21 @@
-.booking {
+.booking__wrap {
+  @media (min-width: $page-width-desktop) {
+    display: grid;
+    grid-template-columns: 625px 1fr;
+    gap: 44px;
+    margin-left: -80px;
+    align-items: center;
+  }
+}
 
+.booking__image {
+  margin: 10px 0 18px;
+
+  @media (min-width: $page-width-desktop) {
+    width: 625px;
+    height: 595px;
+    margin: 0;
+  }
 }
 
 .booking__form {
@@ -9,9 +25,47 @@
 
   @media (min-width: $page-width-desktop) {
     margin-inline: 0;
+    padding: 60px 50px 60px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px 39px;
+    grid-template-areas:
+      "name    datestart"
+      "phone   dateend"
+      "petname type";
   }
 }
 
-.booking__image {
-  margin: 10px 0 18px;
+@media (min-width: $page-width-desktop) {
+  .booking__button {
+    grid-column: 1/-1;
+  }
+
+  .booking__input-extra {
+    grid-column: 1/-1;
+  }
+
+  .booking__input-name {
+    grid-area: name;
+  }
+
+  .booking__input-phone {
+    grid-area: phone;
+  }
+
+  .booking__input-petname {
+    grid-area: petname;
+  }
+
+  .booking__input-datestart {
+    grid-area: datestart;
+  }
+
+  .booking__input-dateend {
+    grid-area: dateend;
+  }
+
+  .booking__input-type {
+    grid-area: type;
+  }
 }
