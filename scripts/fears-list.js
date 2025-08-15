@@ -1,0 +1,1 @@
+var r=document.querySelectorAll(".fears__question");r.forEach(e=>e.addEventListener("click",o=>{let s=e.closest(".fears__wrap").querySelector(".fears__answer");console.log(s),s.classList.toggle("fears__answer--opened"),e.classList.toggle("fears__question--close")}));
