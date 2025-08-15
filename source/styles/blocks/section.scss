@@ -1,5 +1,5 @@
 .section {
-  margin: 80px 0;
+  margin: 0 0 50px;
   font-family: $font-primary;
   font-weight: 400;
   font-size: 16px;
@@ -7,15 +7,14 @@
   color: $text-color;
 
   @media (min-width: $page-width-desktop) {
-    margin: 90px 0;
+    margin-bottom: 90px;
   }
 }
 
 .section__title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  // margin-bottom: 20px;
   padding: 0;
-  font-family: $font-primary;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.4;
@@ -36,9 +35,17 @@
   }
 }
 
-.section__text {
-  font-family: $font-primary;
+.section__subtitle {
+  margin: 0;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 1.4;
+}
+
+.section__text {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.4;
 }

@@ -1,0 +1,42 @@
+.attention {
+  padding: 10px $page-padding-inline-mobile 20px;
+  margin-inline: -$page-padding-inline-mobile;
+  display: grid;
+  gap: 21px;
+  background-color: $section-bg-color;
+
+  @media (min-width: $page-width-desktop) {
+    padding: 100px 60px;
+    margin-inline: 0;
+    grid-template-columns: 509px 1fr;
+    gap: 78px;
+    align-items: center;
+  }
+
+  & picture {
+    display: contents;
+  }
+}
+
+.attention__title {
+  @media (min-width: $page-width-desktop) {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+}
+
+.attention__text {
+  padding: 10px 0;
+}
+
+.attention__image-wrap {
+  justify-self: center;
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 25px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}

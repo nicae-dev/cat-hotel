@@ -1,22 +1,54 @@
+.about {
+  padding-top: 20px;
+  display: grid;
+
+  background-image: url("../../images/about-cat-background.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 320px 304px;
+
+  @media (min-width: $page-width-desktop) {
+    grid-template-columns: 400px 550px;
+    gap: 30px 50px;
+    justify-content: space-between;
+    margin-left: -48px;
+    padding-left: 48px;
+    background-position: 0 104px;
+    background-size: 417px 396px;
+  }
+}
+
+.about__list-wrapper {
+  @media (min-width: $page-width-desktop) {
+    padding: 64px 0;
+    grid-column: 1/-1;
+    background-image: url("../../images/about-paw-background.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 626px 595px;
+  }
+}
+
 .about__list {
   list-style-type: none;
-  // margin: 0;
+  margin: 0;
   padding: 0;
 
   @media (min-width: $page-width-desktop) {
     columns: 2 495px;
     column-gap: 86px;
+    margin: 70px 0 30px;
   }
 }
 
 .about__item {
   display: grid;
-  gap: 13px;
+  gap: 13px 20px;
   grid-template-columns: 28px auto;
   align-items: center;
   margin-bottom: 20px;
 
-  @include icon("cat", $text-second-color, 28px, 28px);
+  @include icon("cat", $text-second-color, 32px, 28px);
 
   @media (min-width: $page-width-desktop) {
     grid-template-columns: 50px auto;
@@ -52,6 +84,7 @@
 
 .about__desc {
   @media (min-width: $page-width-desktop) {
+    max-width: 450px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.5;
@@ -59,11 +92,8 @@
 }
 
 .about__subtitle {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
-
   @media (min-width: $page-width-desktop) {
+    margin: 10px 0;
     font-weight: 600;
     font-size: 20px;
   }
