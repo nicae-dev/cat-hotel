@@ -44,7 +44,10 @@
   background-color: $bg-color-light;
 
   @media (min-width: $page-width-desktop) {
-    padding: 29px 30px 21px;
+    &:first-of-type {
+      padding-top: 29px;
+    }
+    padding: 19px 30px 21px;
     margin-inline: 0;
   }
 }
@@ -53,7 +56,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.4;
-  transition: transform $time-long;
 
   @media (min-width: $page-width-desktop) {
     font-size: 20px;
@@ -75,7 +77,7 @@
     }
 
     &::after {
-      transform: rotate(90deg);
+      animation: minusToPlus $time ease-in-out forwards;
     }
 
     &:hover {
@@ -86,7 +88,27 @@
 
 .fears__question--close {
   &::after {
+    animation: plusToMinus $time ease-in-out forwards;
+  }
+}
+
+@keyframes plusToMinus {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes minusToPlus {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
   }
 }
 
@@ -94,7 +116,7 @@
   margin: 0;
   visibility: hidden;
   height: 0;
-  transition: height $time-long;
+  animation: hideAnswer $time ease-in-out;
 
   @media (min-width: $page-width-desktop) {
     width: 720px;
@@ -102,7 +124,37 @@
 }
 
 .fears__answer--opened {
-  visibility: visible;
-  height: auto;
-  padding-top: 20px;
+  animation: showAnswer $time ease-in-out forwards;
+}
+
+@keyframes showAnswer {
+  0% {
+    opacity: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    height: auto;
+    padding-top: 20px;
+    visibility: visible;
+  }
+}
+
+@keyframes hideAnswer {
+  0% {
+    opacity: 1;
+    height: auto;
+    padding-top: 20px;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+    padding-top: 0;
+    visibility: hidden;
+  }
 }

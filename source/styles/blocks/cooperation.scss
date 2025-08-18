@@ -1,0 +1,89 @@
+.cooperation {
+  display: grid;
+  gap: 30px;
+
+  @media (min-width: $page-width-desktop) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    column-gap: 190px;
+  }
+}
+
+.cooperation__title {
+  margin-bottom: 0;
+
+  @media (min-width: $page-width-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.cooperation__subtitle {
+  @media (min-width: $page-width-desktop) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    grid-row: 2/3;
+  }
+}
+
+.cooperation__desc {
+  @media (min-width: $page-width-desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: auto;
+  }
+}
+
+.cooperation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: $font-primary;
+  display: grid;
+  gap: 30px;
+
+  @media (min-width: $page-width-desktop) {
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1/-1;
+    grid-column: 2/3;
+    gap: 16px 22px;
+  }
+}
+
+.cooperation__item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  @include icon("paw-conture", $icon-color, 73px, 60px);
+
+  &::before {
+    flex-shrink: 0;
+    opacity: 0.25;
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 246px;
+    height: 246px;
+    padding: 23px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid $bg-color;
+    position: relative;
+
+    &::before {
+      // content: none;
+      width: 246px;
+      height: 246px;
+      position: absolute;
+      inset: 0;
+      mask-size: 193px 157px;
+    }
+  }
+}

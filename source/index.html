@@ -22,7 +22,9 @@
         <span class="logo__name">отель для котиков</span>
       </a>
       <ul class="header__contacts contacts">
-        <li class="contacts__item"><span class="contacts__text contacts__text--address">г. Санкт-Петербург<br> ул. Ключевая, дом 32</span></li>
+        <li class="contacts__item">
+          <address class="contacts__text contacts__text--address">г. Санкт-Петербург<br> ул. Ключевая, дом 32</address>
+        </li>
         <li class="contacts__item"><span class="contacts__text contacts__text--time">Круглосуточно</span></li>
         <li class="contacts__item"><a class="contacts__link contacts__text contacts__text--phone" href="tel:+79052305599">+7 (905) 230-55-99</a></li>
       </ul>
@@ -361,7 +363,7 @@
       </section>
 
       <section class="fears section">
-        <h2 class="section__title fears__title">Страхи котовладельца</h2>
+        <h2 class="fears__title section__title ">Страхи котовладельца</h2>
         <small class="fears__hint">Нажмите, чтобы посмотреть</small>
         <dl class="fears__list">
           <div class="fears__wrap">
@@ -392,11 +394,67 @@
           </div>
         </dl>
       </section>
+
+      <section class="cooperation section">
+        <h2 class="cooperation__title section__title">Сотрудничество</h2>
+        <p class="cooperation__desc section__text">Сотрудничество на основе коллаборации: совместные конкурсы, скидочные купоны, кэшбек и тп.</p>
+        <p class="cooperation__subtitle section__subtitle">Приглашаем к сотрудничеству</p>
+        <ul class="cooperation__list">
+          <li class="cooperation__item">Ветеринарные клиники</li>
+          <li class="cooperation__item">Зоомагазины</li>
+          <li class="cooperation__item">Грумеров</li>
+          <li class="cooperation__item">Туристические фирмы</li>
+        </ul>
+      </section>
     </div>
+
+    <section class="address section container">
+      <h2 class="address__title section__title">Адрес и контакты</h2>
+      <address class="address__address section__text">г. Санкт-Петербург ул. Ключевая, д.32</address>
+      <button class="address__copy-button" type="button">Скопировать адрес для навигатора</button>
+      <picture>
+        <source type="image/webp" media="(min-width: 1600px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1200" height="500">
+        <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="300" height="230">
+
+        <source type="image/jpeg" media="(min-width: 1600px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.png 2x" width="1200" height="500">
+        <img class="address__map" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="300" height="230" alt="карта с адресом" loading="lazy">
+      </picture>
+      <h3 class="address__subtitle section__subtitle">Как пройти</h3>
+      <ul class="address__list">
+        <li class="address__item">
+          <picture>
+            <source type="image/webp" srcset="images/address1@1x.webp 1x, images/address1@2x.webp 2x" width="200" height="210">
+            <img class="address__image" src="images/address1@1x.jpg" srcset="images/address1@2x.jpg 2x" width="200" height="210" alt="стрелка указывает на здание рядом с парковкой" loading="lazy">
+          </picture>
+          <p class="address__text">Мы находимся в здании многоуровневой парковки со стороны двора</p>
+        </li>
+        <li class="address__item">
+          <picture>
+            <source type="image/webp" srcset="images/address2@1x.webp 1x, images/address2@2x.webp 2x" width="200" height="210">
+            <img class="address__image" src="images/address2@1x.jpg" srcset="images/address2@2x.jpg 2x" width="200" height="210" alt="здание вблизи, стрелка указывает на вывестку вход" loading="lazy">
+          </picture>
+          <p class="address__text">Вход со двора под вывеской "Вход" 5 этаж</p>
+        </li>
+        <li class="address__item">
+          <picture>
+            <source type="image/webp" srcset="images/address3@1x.webp 1x, images/address3@2x.webp 2x" width="200" height="210">
+            <img class="address__image" src="images/address3@1x.jpg" srcset="images/address3@2x.jpg 2x" width="200" height="210" alt="стрелки показывают тропинку через ворота к зданию" loading="lazy">
+          </picture>
+          <p class="address__text">Если навигатор привел Вас со стороны бизнес центра к шлагбауму, можно пройти по тропинке направо</p>
+        </li>
+      </ul>
+    </section>
   </main>
 
-  <footer class="page__footer footer">
-
+  <footer class="page__footer footer container">
+    <p class="footer__copyright ">Copyright © 2021</p>
+    <ul class="footer__menu menu">
+      <li class="menu__item"><a class="menu__link" href="#!">Номера и цены</a></li>
+      <li class="menu__item"><a class="menu__link" href="#!">Заявка на бронирование</a></li>
+      <li class="menu__item"><a class="menu__link" href="#!">Оплатить</a></li>
+      <li class="menu__item"><a class="menu__link" href="#!">Видеонаблюдение</a></li>
+      <li class="menu__item"><a class="menu__link" href="#!">Всё о нас</a></li>
+    </ul>
   </footer>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <script src="scripts/rooms-slider.js" async></script>

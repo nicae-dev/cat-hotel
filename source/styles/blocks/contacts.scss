@@ -29,6 +29,8 @@
 }
 
 .contacts__text--address {
+  font-style: normal;
+
   @include icon("address");
 }
 
