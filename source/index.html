@@ -22,20 +22,25 @@
         <span class="logo__name">отель для котиков</span>
       </a>
       <ul class="header__contacts contacts">
-        <li class="contacts__item">
-          <address class="contacts__text contacts__text--address">г. Санкт-Петербург<br> ул. Ключевая, дом 32</address>
+        <li class="contacts__item contacts__item--address">
+          <address class="contacts__text">г. Санкт-Петербург<br> ул. Ключевая, дом 32</address>
         </li>
-        <li class="contacts__item"><span class="contacts__text contacts__text--time">Круглосуточно</span></li>
-        <li class="contacts__item"><a class="contacts__link contacts__text contacts__text--phone" href="tel:+79052305599">+7 (905) 230-55-99</a></li>
+        <li class="contacts__item contacts__item--time"><span class="contacts__text">Круглосуточно</span></li>
+        <li class="contacts__item contacts__item--phone"><a class="contacts__link contacts__text" href="tel:+79052305599">+7 (905) 230-55-99</a></li>
       </ul>
       <a class="header__social button button--icon button--icon-instagram" href="#!">kotikozoohotel</a>
     </header>
     <section class="hero__wrapper">
       <nav class="hero__nav">
-        <img src="images/paw-with-text.svg" alt="навигация" width="381" height="379">
+        <ul class="hero__menu paw-menu">
+          <li class="paw-menu__item"><a class="paw-menu__link" href="#!">Номера и цены</a></li>
+          <li class="paw-menu__item"><a class="paw-menu__link" href="#!">Заявка на бронирование</a></li>
+          <li class="paw-menu__item"><a class="paw-menu__link" href="#!">Видео наблюдение</a></li>
+          <li class="paw-menu__item"><a class="paw-menu__link" href="#!">Оплатить</a></li>
+          <li class="paw-menu__item"><a class="paw-menu__link" href="#!">Всё о нас</a></li>
+        </ul>
       </nav>
       <h1 class="hero__title">Гостиница для кошек <br>с видеонаблюдением</h1>
-      <p class="hero__stamp">Любовь и забота гарантированы</p>
       <div class="hero__text-and-form">
         <p class="hero__slogan">Будьте спокойны за вашего питомца, пока вы в отъезде</p>
         <form class="hero__form form" action="/" method="post">
@@ -46,6 +51,7 @@
           <button class="form__button button hero__button" type="submit">Отправить заявку</button>
         </form>
       </div>
+      <p class="hero__stamp">Любовь и забота гарантированы</p>
       <ul class="hero__features">
         <li class="hero__features-item">видеонаблюдение в режиме 24/7 и ежедневный фото/видеоотчет в мессенджеры</li>
         <li class="hero__features-item">просторные номера <br>с окнами</li>
@@ -58,7 +64,7 @@
     <div class="container">
 
       <section class="rooms section">
-        <div class="section__wrapper-title">
+        <div class="section__wrapper-title rooms__wrapper-title">
           <h2 class="section__title">Номера и цены</h2>
           <div class="rooms__sale"><span>Скидка 20% до конца ноября!</span></div>
         </div>
@@ -304,7 +310,7 @@
       </section>
 
       <section class="section videoroom">
-        <div class="section__wrapper-title">
+        <div class="section__wrapper-title videoroom__wrapper-title">
           <h2 class="section__title">Видеонаблюдение</h2>
           <p class="videoroom__text">Чтобы увидеть вашего кота или кошку нужно войти под логином и паролем, которые вам выдали при заселении</p>
         </div>
@@ -412,13 +418,18 @@
       <h2 class="address__title section__title">Адрес и контакты</h2>
       <address class="address__address section__text">г. Санкт-Петербург ул. Ключевая, д.32</address>
       <button class="address__copy-button" type="button">Скопировать адрес для навигатора</button>
-      <picture>
-        <source type="image/webp" media="(min-width: 1600px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1200" height="500">
-        <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="300" height="230">
+      <div class="address__map-wrap">
+        <noscript>
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1200" height="500">
+            <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="300" height="230">
 
-        <source type="image/jpeg" media="(min-width: 1600px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.png 2x" width="1200" height="500">
-        <img class="address__map" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="300" height="230" alt="карта с адресом" loading="lazy">
-      </picture>
+            <source type="image/jpeg" media="(min-width: 1600px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.png 2x" width="1200" height="500">
+            <img class="address__map" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="300" height="230" alt="карта с адресом" loading="lazy">
+          </picture>
+        </noscript>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9be431ff17861b35433e49d275e152fe82134551fd8e4bbaa0af7e918eca0d5f&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
       <h3 class="address__subtitle section__subtitle">Как пройти</h3>
       <ul class="address__list">
         <li class="address__item">

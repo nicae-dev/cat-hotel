@@ -1,14 +1,11 @@
 .container {
-  width: $page-width-mobile;
+  width: 100%;
   margin: 0 auto;
   padding: 0 $page-padding-inline-mobile;
   display: flex;
   flex-direction: column;
-  // background-color: $bg-color-page;
-  background-color: rgba($text-color, 0.2);
 
   @media (min-width: $page-width-desktop) {
-    width: $page-width-desktop;
     padding: 0 $page-padding-inline;
   }
 }

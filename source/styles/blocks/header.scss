@@ -1,17 +1,19 @@
 .header {
   display: grid;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 
   @media (min-width: $page-width-desktop) {
     align-items: center;
     grid-template-columns: 200px 1fr 260px;
-    gap: 10px;
-    padding-top: 30px;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 0;
   }
 }
 
 .header__logo {
-  margin: -10px auto 0;
+  margin: 0 auto;
 
   @media (min-width: $page-width-desktop) {
     margin-left: -10px;
@@ -22,6 +24,10 @@
 .header__contacts {
   align-items: center;
   justify-content: end;
+
+  @media (max-width: $page-width-desktop) {
+    margin-bottom: 25px;
+  }
 }
 
 .header__social {

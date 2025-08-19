@@ -78,10 +78,10 @@
     position: relative;
 
     &::before {
-      // content: none;
       width: 246px;
       height: 246px;
       position: absolute;
+      z-index: -1;
       inset: 0;
       mask-size: 193px 157px;
     }

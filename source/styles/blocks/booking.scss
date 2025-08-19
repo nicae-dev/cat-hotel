@@ -16,6 +16,10 @@
     height: 595px;
     margin: 0;
   }
+
+  & .rotate {
+    transform: rotate(90deg);
+  }
 }
 
 .booking__form {

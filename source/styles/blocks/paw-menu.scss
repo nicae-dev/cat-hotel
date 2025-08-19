@@ -1,0 +1,152 @@
+.paw-menu {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 300px;
+  height: 297px;
+  background-image: url("../../images/paw-menu.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+
+  @media (min-width: $page-width-desktop) {
+    width: 381px;
+    height: 378px;
+  }
+}
+
+.paw-menu__item {
+  position: absolute;
+  height: 104px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+
+  transform-origin: center;
+
+  @media (min-width: $page-width-desktop) {
+    height: 133px;
+    width: 105px;
+    font-size: 9px;
+  }
+}
+
+.paw-menu__item:nth-child(1) {
+  width: 66px;
+  top: 37%;
+  left: 2.7%;
+  transform: rotate(-29deg);
+
+  @media (min-width: $page-width-desktop) {
+    width: 85px;
+    font-size: 16px;
+  }
+}
+
+.paw-menu__item:nth-child(2) {
+  width: 63px;
+  top: 6%;
+  left: 19%;
+  transform: rotate(-13deg);
+
+  @media (min-width: $page-width-desktop) {
+    transform: rotate(-15deg);
+    width: 85px;
+    font-size: 9px;
+  }
+}
+
+.paw-menu__item:nth-child(3) {
+  width: 64px;
+  top: 0;
+  left: 50.3%;
+  transform: rotate(-0.33deg);
+
+  @media (min-width: $page-width-desktop) {
+    width: 85px;
+    font-size: 10px;
+  }
+}
+
+.paw-menu__item:nth-child(4) {
+  width: 75px;
+  top: 23%;
+  right: 2%;
+  font-size: 14px;
+  transform: rotate(13deg);
+
+  & .paw-menu__link::first-line {
+    font-size: 14px;
+
+    @media (min-width: $page-width-desktop) {
+      font-size: 17px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    width: 90px;
+  }
+}
+
+.paw-menu__item:nth-child(5) {
+  height: 140px;
+  width: 90px;
+  top: 49%;
+  left: 40%;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  transform: rotate(-14deg);
+
+  & .paw-menu__link::first-line {
+    font-size: 24px;
+
+    @media (min-width: $page-width-desktop) {
+      font-size: 40px;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    height: 184px;
+    width: 115px;
+    font-size: 40px;
+  }
+}
+
+.paw-menu__link {
+  display: block;
+  color: $text-color-with-bg;
+  text-decoration: none;
+  text-align: center;
+  word-break: break-word;
+
+  text-shadow:
+    -1px -1px 0 $text-accent-color,
+    1px -1px 0 $text-accent-color,
+    -1px 1px 0 $text-accent-color,
+    1px 1px 0 $text-accent-color;
+  transition: color $time;
+
+  &::first-line {
+    font-size: 15px;
+    font-weight: 600;
+
+    @media (min-width: $page-width-desktop) {
+      font-size: 20px;
+    }
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: $text-color;
+    cursor: pointer;
+  }
+}

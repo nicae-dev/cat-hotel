@@ -1,45 +1,61 @@
 .contacts {
-  list-style-type: none;
-
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 
   @media (min-width: $page-width-desktop) {
-    display: flex;
+    flex-flow: row wrap;
     gap: 20px;
   }
 }
 
-.contacts__text {
+.contacts__item {
   padding: 5px;
   display: flex;
   align-items: center;
   gap: 7px;
   flex-direction: column;
-  font-family: $font-primary;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 1;
   color: $text-color;
 
   @media (min-width: $page-width-desktop) {
     flex-direction: row;
-    gap: 5px;
+    gap: 6px;
   }
 }
 
-.contacts__text--address {
+.contacts__text {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  font-style: normal;
+  text-align: center;
+  color: currentColor;
+
+  @media (min-width: $page-width-desktop) {
+    text-align: left;
+  }
+}
+
+.contacts__item--address {
   font-style: normal;
 
-  @include icon("address");
+  @include icon("address",$icon-color, 25px, 25px, 19px, 19px);
 }
 
-.contacts__text--time {
-  @include icon("clock");
+.contacts__item--time {
+  @include icon("clock",$icon-color, 25px, 25px, 18px, 18px);
 }
 
-.contacts__text--phone {
-  @include icon("phone");
+.contacts__item--phone {
+  @include icon("phone",$icon-color, 25px, 25px, 18px, 18px);
+
+  @media (max-width: ($page-width-desktop - 1)) {
+    order: -1;
+  }
 }
 
 .contacts__link {

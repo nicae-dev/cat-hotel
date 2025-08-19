@@ -2,8 +2,10 @@
   font-family: $font-primary;
   color: $text-color;
   padding-bottom: 40px;
+  margin-bottom: 10px;
 
   @media (min-width: $page-width-desktop) {
+    margin-bottom: 95px;
     background-image:
       url("../../images/hero-plants.svg"),
       url("../../images/hero-leaves.svg"),
@@ -14,7 +16,7 @@
     background-repeat: no-repeat;
     background-position:
       calc(100% + 30px) calc(100% - 53px),
-      0 100%,
+      -40px 100%,
       calc(50% - 173px) 10px,
       calc(50% + 196px) 66px,
       calc(50% + 334px) 44px,
@@ -30,8 +32,10 @@
 }
 
 .hero__wrapper {
+  display: grid;
+  gap: 25px;
+
   @media (min-width: $page-width-desktop) {
-    display: grid;
     grid-template-columns: 380px 1fr;
     grid-template-rows: repeat(4, auto);
     gap: 0 32px;
@@ -41,6 +45,10 @@
 .hero__nav {
   grid-column: 1/2;
   grid-row: 1/-3;
+
+  @media (max-width: ($page-width-desktop - 1)) {
+    margin-bottom: 25px;
+  }
 }
 
 
@@ -72,6 +80,7 @@
 }
 
 .hero__slogan {
+  margin: 0;
   font-family: $font-primary;
   font-weight: 500;
   font-size: 20px;
@@ -91,7 +100,7 @@
     grid-column: 2/3;
     grid-row: 2/-2;
     margin-right: -200px;
-    padding-bottom: 88px;
+    padding-bottom: 90px;
     background-image: url("../../images/hero-cat.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -106,6 +115,7 @@
 }
 
 .hero__stamp {
+  margin: 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
@@ -123,7 +133,7 @@
 
     font-weight: 600;
     font-size: 14px;
-    line-height: 1;
+    line-height: 25px;
     text-align: center;
     color: $text-color-with-bg;
     text-shadow:
@@ -137,14 +147,17 @@
     background-position: center center;
     background-size: 179px;
 
-    transform: rotate(-16.54deg);
+    transform: rotate(-17deg);
     transform-origin: center;
+    position: relative;
+    top: -10px;
+    left: 9px;
   }
 }
 
 .hero__features {
   list-style-type: none;
-  padding: 20px 0;
+  padding: 7px 0;
   margin: 0;
 
   display: flex;
@@ -152,6 +165,7 @@
   flex-wrap: wrap;
 
   @media (min-width: $page-width-desktop) {
+    padding: 20px 0;
     grid-row: -2/-1;
     grid-column: 1/3;
   }
@@ -163,9 +177,18 @@
   line-height: 1.4;
   display: grid;
   grid-template-columns: 45px 1fr;
-  gap: 20px;
   align-items: center;
+  gap: 5px;
   max-width: 316px;
 
-  @include icon("heart", $text-second-color, 45px, 38px);
+  @include icon("heart", $text-second-color, 35px, 30px);
+
+  @media (min-width: $page-width-desktop) {
+    gap: 20px;
+
+    &::before {
+      width: 45px;
+      height: 38px;
+    }
+  }
 }

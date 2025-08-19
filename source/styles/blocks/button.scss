@@ -14,6 +14,7 @@
   background-color: $button-bg-color;
   text-decoration: none;
   text-align: center;
+  transition: color $time, background-color $time;
 
   @media (min-width: $page-width-desktop) {
     padding: 18px 30px;

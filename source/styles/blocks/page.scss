@@ -1,7 +1,19 @@
-.page__body {
+
+.page {
   font-family: $font-primary;
   font-size: 18px;
   line-height: 1.4;
   color: $text-color;
   background-color: $text-light-color;
+}
+
+.page__body {
+  width: $page-width-mobile;
+  margin: 0 auto;
+  background-color: $bg-color-page;
+  // background-color: rgba($text-color, 0.2);
+
+  @media (min-width: $page-width-desktop) {
+    width: $page-width-desktop;
+  }
 }
