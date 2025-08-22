@@ -13,5 +13,5 @@
 * HTML5
 * SCSS
 * БЭМ
-* JS - генерация номеров в секции "Видеонаблюдение"
+* JS - [генерация номеров в секции "Видеонаблюдение"](source/scripts/videoroom-list.js), [раскрывающиеся элементы в "Страхи"](source/scripts/fears-list.js)
 * [Swiper API](https://swiperjs.com/swiper-api)
